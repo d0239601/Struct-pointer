@@ -30,3 +30,4 @@ void print_students(struct dynarray* students);
 struct student* find_max_gpa(struct dynarray* students);
 struct student* find_min_gpa(struct dynarray* students);
 void sort_by_gpa(struct dynarray* students);
+
