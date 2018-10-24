@@ -1,5 +1,0 @@
-# This file allows us to tell git to ignore certain files.  We'll ignore all
-# of the products of compilation.
-test
-*.o
-*.dSYM/
