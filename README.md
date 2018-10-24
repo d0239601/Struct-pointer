@@ -69,34 +69,3 @@ printf("%s\n", sptr->name);
 
 Many of the functions from the dynamic array implementation you'll use in this assignment either take `void*` arguments or return `void*` values.  In general, it will work fine for you to pass `struct student*` values into `void*` arguments.  When working with `void*` return values, make sure to either cast back to `struct student*` or to assign to a variable of type `struct student*` if you want to access the underlying fields of the student structure.
 
-## Testing your work
-
-In addition to the dynamic array implementation and the skeleton code in `students.h` and `students.c`, you are also provided with some application code in `test.c` to help verify that your functions are behaving the way you want them to.  In particular, the code in `test.c` calls the functions from `students.c`, passing them appropriate arguments, and then prints the results.  You can use the provided `Makefile` to compile all of the code in the project together, and then you can run the testing code as follows:
-```
-make
-./test
-```
-
-In order to verify that your memory freeing functions work correctly, it will be helpful to run the testing application through `valgrind`.
-
-## Submission
-
-As always, we'll be using GitHub Classroom for this assignment, and you will submit your assignment via GitHub. Just make sure your completed files are committed and pushed by the assignment's deadline to the master branch of the GitHub repo that was created for you by GitHub Classroom. A good way to check whether your files are safely submitted is to look at the master branch of your assignment repo on the github.com website (i.e. https://github.com/OSU-CS261-F18/assignment-1-YourGitHubUsername/). If your changes show up there, you can consider your files submitted.
-
-## Grading criteria
-
-Your program **MUST** compile and run on `flip.engr.oregonstate.edu`, so make sure you have tested your work there before you make your final submission, since a program that compiles and runs in one environment may not compile and run in another.  **Assignments that do not compile on flip will receive a grade of 0.**  If you do not have an ENGR account, you can create one at https://teach.engr.oregonstate.edu/.
-
-The assignment is worth 100 total points, broken down as follows:
-
-  * 10 points: `create_student()` allocates and initializes a `struct student` as described above
-  * 10 points: `free_student()` frees the memory held by a `struct student` as described above (no memory leaks!)
-  * 10 points: `create_student_array()` allocates and initializes a dynamic array of `struct student`s as described above
-  * 10 points: `free_student_array()` frees the memory held by a dynamic array of `struct student`s as described above (no memory leaks!)
-  * 10 points: `print_students()` prints a dynamic array of students as described above
-  * 10 points: `find_min_gpa()` finds the student with the lowest GPA as described above
-  * 10 points: `find_max_gpa()` finds the student with the highest GPA as described above
-  * 20 points: `sort_by_gpa()` sorts a dynamic array of students by descending GPA, in place, as described above
-  * 10 points: you can provide a satisfactory explanation of how your code works during your grading demo with the TA
-
-Note that we will only consider changes to `students.c` when grading your work.  Changes to other files will be ignored.
